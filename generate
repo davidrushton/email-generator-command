@@ -1,0 +1,14 @@
+#! /usr/bin/env php
+
+<?php
+
+use App\GenerateEmailsCommand;
+use Symfony\Component\Console\Application;
+
+require 'vendor/autoload.php';
+
+$app = new Application('Generator', '1.0');
+
+$app->add(new GenerateEmailsCommand);
+
+$app->run();
