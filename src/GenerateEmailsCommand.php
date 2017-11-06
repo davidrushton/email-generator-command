@@ -41,7 +41,7 @@ class GenerateEmailsCommand extends Command {
         $batch = $input->getOption('batch');
 
         $emails = $this->makeEmails($total);
-        $this->saveEmails($emails, $filename);
+        $this->saveEmails($emails, $filename, $batch);
 
         $output->writeln('Complete - Generated '.$total.' emails');
     }
